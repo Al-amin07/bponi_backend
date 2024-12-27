@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RestaurentRoute = void 0;
+const express_1 = require("express");
+const restaurent_controller_1 = require("./restaurent.controller");
+const route = (0, express_1.Router)();
+route.get('/', restaurent_controller_1.RestaurentControllers.getAllRestaurent);
+route.get('/:id', restaurent_controller_1.RestaurentControllers.getSingleRestaurent);
+route.patch('/:id', restaurent_controller_1.RestaurentControllers.updateRestaurent);
+exports.RestaurentRoute = route;

@@ -16,13 +16,12 @@ app.use(
 
 app.use('/api/v1/restaurent', RestaurentRoute);
 
-app.use(globalErrorHandler);
-app.use(notFound);
 app.get('/', (req: Request, res: Response) => {
   res.status(200).json({
     success: true,
     message: 'Hello World!!!',
   });
 });
-
+app.use(globalErrorHandler);
+app.use(notFound);
 export default app;
