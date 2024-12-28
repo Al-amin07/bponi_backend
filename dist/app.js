@@ -11,7 +11,11 @@ const notFound_1 = __importDefault(require("./app/middleware/notFound"));
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
 app.use((0, cors_1.default)({
-    origin: ['http://localhost:5173', 'http://localhost:5174'],
+    origin: [
+        'http://localhost:5173',
+        'http://localhost:5174',
+        'https://bponi01.netlify.app',
+    ],
     credentials: true,
 }));
 app.use('/api/v1/restaurent', restaurent_route_1.RestaurentRoute);
